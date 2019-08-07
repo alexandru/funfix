@@ -873,7 +873,7 @@ export class Option<A> implements std.IEquals<Option<A>>, HK<"funfix/option", A>
    * If the given value is `null` or `undefined` then the returned
    * option will be empty.
    */
-  static of<A>(value: A | null | undefined): Option<A> {
+  static of<A>(value: A | null | undefined): Option<NonNullable<A>> {
     return value != null ? Some(value) : None
   }
 
