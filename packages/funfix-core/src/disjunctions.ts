@@ -271,8 +271,8 @@ export class Either<L, R> implements std.IEquals<Either<L, R>>, HK2<"funfix/eith
    * source is a `right` value.
    *
    * ```typescript
-   * Right(12).forAll(console.log) // prints 12
-   * Left(10).forAll(console.log)  // silent
+   * Right(12).forEach(console.log) // prints 12
+   * Left(10).forEach(console.log)  // silent
    * ```
    */
   forEach(cb: (r: R) => void): void {
